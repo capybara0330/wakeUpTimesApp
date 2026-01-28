@@ -25,12 +25,14 @@ function calcWakeUpTimes(){
     }
 
     promptSection.classList.add("hidden");
+    imageContainer.classList.add("hidden");
     resultSection.classList.remove("hidden");
 }
 
 function goBack(){
     promptSection.classList.remove("hidden");
     resultSection.classList.add("hidden");
+    imageContainer.classList.remove("hidden");
 }
 
 const calcBtn = document.getElementById("calc-btn");
@@ -39,6 +41,7 @@ const returnBtn = document.getElementById("return-btn");
 const wakeUpHoursDiv = document.getElementById("wakeup-hours-div");
 const resultSection = document.getElementById("result-section");
 const promptSection = document.getElementById("prompt-section");
+const imageContainer = document.getElementById("img-container");
 
 calcBtn.onclick = calcWakeUpTimes;
 returnBtn.onclick = goBack;
