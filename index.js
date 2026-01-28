@@ -23,9 +23,23 @@ function calcWakeUpTimes(){
         cycleDiv.setAttribute("class", `cycle`);
         wakeUpHoursDiv.appendChild(cycleDiv);
     }
+
+    promptSection.classList.add("hidden");
+    resultSection.classList.remove("hidden");
+}
+
+function goBack(){
+    promptSection.classList.remove("hidden");
+    resultSection.classList.add("hidden");
 }
 
 const calcBtn = document.getElementById("calc-btn");
+const refreshBtn = document.getElementById("refresh-btn");
+const returnBtn = document.getElementById("return-btn");
 const wakeUpHoursDiv = document.getElementById("wakeup-hours-div");
+const resultSection = document.getElementById("result-section");
+const promptSection = document.getElementById("prompt-section");
 
 calcBtn.onclick = calcWakeUpTimes;
+returnBtn.onclick = goBack;
+refreshBtn.onclick = calcWakeUpTimes;
