@@ -20,6 +20,7 @@ function calcWakeUpTimes(){
         const cycleDiv = document.createElement("div");
         cycleDiv.textContent = wakeUpTimeString;
         cycleDiv.setAttribute("id", `cycle-${i+1}`);
+        cycleDiv.setAttribute("class", `cycle`);
         wakeUpHoursDiv.appendChild(cycleDiv);
     }
 }
